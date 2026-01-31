@@ -75,7 +75,7 @@ export const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <a href="/public/Curriculo-Rodrigo-Abade.pdf" download>
+              <a href="/Curriculo-Rodrigo-Abade.pdf" download>
                 <Button size="lg" className="gap-2 glow">
                   <Download className="w-4 h-4" />
                   {t("hero.downloadCV")}
@@ -137,8 +137,7 @@ export const Hero = () => {
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border">
                 <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
-                  <img
-                    src="/public/teste.png"
+                  <img src="/teste.png" 
                     alt="Foto de perfil"
                     className="w-full h-full object-cover"
                     loading="eager"
