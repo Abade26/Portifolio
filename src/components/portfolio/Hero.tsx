@@ -133,7 +133,7 @@ export const Hero = () => {
                   <div className="text-center text-muted-foreground">
                   <div className="w-full h-full">
                         <img
-                          src="/teste.png"
+                          src="/public/teste.png"
                           alt="Foto de perfil"
                           className="w-full h-full object-cover"
                         />
