@@ -54,7 +54,7 @@ export const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </motion.a>
             <motion.a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/Abade26"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}

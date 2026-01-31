@@ -33,7 +33,6 @@ export const About = () => {
             transition={{ delay: 0.4 }}
             className="relative"
           >
-            {/* Decorative elements */}
             <div className="absolute -top-4 -left-4 w-20 h-20 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
             <div className="absolute -bottom-4 -right-4 w-20 h-20 border-r-2 border-b-2 border-accent/30 rounded-br-lg" />
 
@@ -42,7 +41,6 @@ export const About = () => {
                 {t("about.description")}
               </p>
 
-              {/* Stats/Highlights */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-10">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -51,7 +49,9 @@ export const About = () => {
                   className="text-center"
                 >
                   <div className="text-3xl md:text-4xl font-bold gradient-text">2+</div>
-                  <div className="text-sm text-muted-foreground mt-1">Anos de experiência</div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {t("about.stats.experience")}
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -61,7 +61,9 @@ export const About = () => {
                   className="text-center"
                 >
                   <div className="text-3xl md:text-4xl font-bold gradient-text">.NET</div>
-                  <div className="text-sm text-muted-foreground mt-1">Especialização</div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {t("about.stats.specialization")}
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -71,7 +73,9 @@ export const About = () => {
                   className="text-center col-span-2 md:col-span-1"
                 >
                   <div className="text-3xl md:text-4xl font-bold gradient-text">3+</div>
-                  <div className="text-sm text-muted-foreground mt-1">Sistemas desenvolvidos</div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    {t("about.stats.systems")}
+                  </div>
                 </motion.div>
               </div>
             </div>

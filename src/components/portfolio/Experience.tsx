@@ -80,8 +80,10 @@ export const Experience = () => {
                       {t("experience.description")}
                     </p>
 
-                    <h4 className="font-semibold mb-4 text-foreground">Principais atividades:</h4>
-                    
+                  <h4 className="font-semibold mb-4 text-foreground">
+                    {t("experience.activitiesTitle")}
+                  </h4>     
+                                 
                     <ul className="space-y-3">
                       {activities.map((activity, index) => (
                         <motion.li

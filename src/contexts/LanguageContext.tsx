@@ -26,8 +26,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About
     "about.title": "Sobre Mim",
-    "about.description":
-      "Sou Desenvolvedor .NET com experiência no desenvolvimento e evolução de sistemas, atuando principalmente no back-end. Trabalho com .NET Core, criação de serviços em background (Worker Services) e Entity Framework Core para acesso e manipulação de dados. Tenho foco em código limpo, boas práticas de arquitetura e soluções que automatizam processos e aumentam a eficiência dos sistemas.",
+    "about.description": "Sou Desenvolvedor .NET com experiência no desenvolvimento e evolução de sistemas, atuando principalmente no back-end. Trabalho com .NET Core, criação de serviços em background (Worker Services) e Entity Framework Core para acesso e manipulação de dados. Tenho foco em código limpo, boas práticas de arquitetura e soluções que automatizam processos e aumentam a eficiência dos sistemas.",
+    "about.stats.experience": "Anos de experiência",
+    "about.stats.specialization": "Especialização",
+    "about.stats.systems": "Sistemas desenvolvidos",
 
     // Skills
     "skills.title": "Habilidades Técnicas",
@@ -41,36 +43,24 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.role": "Desenvolvedor .NET",
     "experience.company": "Ministério Público",
     "experience.period": "02/2024 - 12/2025",
-    "experience.description":
-      "Atuação no desenvolvimento e evolução de sistemas institucionais.",
+    "experience.description": "Atuação no desenvolvimento e evolução de sistemas institucionais.",
     "experience.activity1": "Desenvolvimento e manutenção de sistemas internos",
-    "experience.activity2":
-      "Implementação de novas funcionalidades baseadas em regras de negócio",
+    "experience.activity2": "Implementação de novas funcionalidades baseadas em regras de negócio",
     "experience.activity3": "Correções de bugs e melhoria de performance",
     "experience.activity4": "Criação de serviços automatizados",
-    "experience.activity5":
-      "Participação no projeto de desativação automática de estagiários e voluntários",
+    "experience.activity5":"Participação no projeto de desativação automática de estagiários e voluntários",
+    "experience.activitiesTitle": "Principais atividades:",
 
     // Projects
     "projects.title": "Projetos",
-
     "projects.project1.title": "Serviço de Desativação Automática",
-    "projects.project1.description":
-      "Sistema automatizado responsável por desativar registros de estagiários e voluntários com base em regras administrativas, reduzindo trabalho manual e falhas operacionais.",
-
+    "projects.project1.description": "Sistema automatizado responsável por desativar registros de estagiários e voluntários com base em regras administrativas, reduzindo trabalho manual e falhas operacionais.",
     "projects.project2.title": "Manutenção e Evolução de Sistemas Institucionais",
-    "projects.project2.description":
-      "Atuação contínua na melhoria de sistemas internos, implementando novas funcionalidades, correções e otimizações.",
-
-    "projects.project3.title":
-      "Walleye - Detecção Inteligente de Rachaduras Estruturais com IA",
-    "projects.project3.description":
-      "Sistema de detecção de rachaduras estruturais utilizando Inteligência Artificial e Raspberry Pi. A solução realiza inspeções em tempo real com visão computacional, enviando alertas automáticos e permitindo monitoramento remoto via interface web.",
-
-    "projects.project4.title":
-      "Monitoramento de Gases com MQ-135/MQ-7",
-    "projects.project4.description":
-      "Sistema IoT para monitoramento de qualidade do ar com ESP8266, sensores MQ-135 e MQ-7 e display OLED. O dispositivo coleta leituras periódicas, classifica a qualidade do ar e envia os dados para Supabase e ThingSpeak para armazenamento e visualização remota.",
+    "projects.project2.description":"Atuação contínua na melhoria de sistemas internos, implementando novas funcionalidades, correções e otimizações.",
+    "projects.project3.title":"Walleye - Detecção Inteligente de Rachaduras Estruturais com IA",
+    "projects.project3.description":"Sistema de detecção de rachaduras estruturais utilizando Inteligência Artificial e Raspberry Pi. A solução realiza inspeções em tempo real com visão computacional, enviando alertas automáticos e permitindo monitoramento remoto via interface web.",
+    "projects.project4.title": "Monitoramento de Gases com MQ-135/MQ-7",
+    "projects.project4.description":"Sistema IoT para monitoramento de qualidade do ar com ESP8266, sensores MQ-135 e MQ-7 e display OLED. O dispositivo coleta leituras periódicas, classifica a qualidade do ar e envia os dados para Supabase e ThingSpeak para armazenamento e visualização remota.",
 
     // Project tags
     "projects.tags.automation": "Automação",
@@ -125,8 +115,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About
     "about.title": "About Me",
-    "about.description":
-      "I am a .NET Developer with experience in the development and evolution of systems, working primarily on the back end. I work with .NET Core, building background services (Worker Services), and using Entity Framework Core for data access and manipulation. I focus on clean code, good architectural practices, and solutions that automate processes and improve system efficiency.",
+    "about.description": "I am a .NET Developer with experience in the development and evolution of systems, working primarily on the back end. I work with .NET Core, building background services (Worker Services), and using Entity Framework Core for data access and manipulation. I focus on clean code, good architectural practices, and solutions that automate processes and improve system efficiency.",
+    "about.stats.experience": "Years of experience",
+    "about.stats.specialization": "Specialization",
+    "about.stats.systems": "Systems developed",
 
     // Skills
     "skills.title": "Technical Skills",
@@ -140,22 +132,19 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.role": ".NET Developer",
     "experience.company": "Public Prosecutor's Office",
     "experience.period": "02/2024 - 12/2025",
-    "experience.description":
-      "Working on the development and evolution of institutional systems.",
+    "experience.description": "Working on the development and evolution of institutional systems.",
     "experience.activity1": "Development and maintenance of internal systems",
-    "experience.activity2":
-      "Implementation of new features based on business rules",
+    "experience.activity2": "Implementation of new features based on business rules",
     "experience.activity3": "Bug fixes and performance improvements",
     "experience.activity4": "Creation of automated services",
-    "experience.activity5":
-      "Participation in the automatic deactivation project for interns and volunteers",
+    "experience.activity5": "Participation in the automatic deactivation project for interns and volunteers",
+    "experience.activitiesTitle": "Main activities:",
 
     // Projects
     "projects.title": "Projects",
 
     "projects.project1.title": "Automatic Deactivation Service",
-    "projects.project1.description":
-      "Automated system responsible for deactivating intern and volunteer records based on administrative rules, reducing manual work and operational failures.",
+    "projects.project1.description": "Automated system responsible for deactivating intern and volunteer records based on administrative rules, reducing manual work and operational failures.",
 
     "projects.project2.title":
       "Maintenance and Evolution of Institutional Systems",

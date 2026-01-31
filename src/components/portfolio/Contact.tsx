@@ -117,7 +117,7 @@ export const Contact = () => {
             <Button
               size="lg"
               className="gap-2 glow"
-              onClick={() => window.open("mailto:seu.email@exemplo.com")}
+              onClick={() => window.open("mailto:rodrigoabadedev@gmail.com")}
             >
               <Send className="w-4 h-4" />
               {t("hero.contact")}
