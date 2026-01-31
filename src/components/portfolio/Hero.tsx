@@ -136,11 +136,14 @@ export const Hero = () => {
 
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border">
-                <img
-                  src="/teste.png"
-                  alt="Foto de perfil"
-                  className="w-full h-full object-cover rounded-full"
-                />
+                <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src="/src/teste.png"
+                    alt="Foto de perfil"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </div>
               </div>
 
               {/* Floating tech badges */}
