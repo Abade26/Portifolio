@@ -75,13 +75,19 @@ export const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-           <a href="/Curriculo-Rodrigo-Abade.pdf" download>
-            <Button size="lg" className="gap-2 glow">
-              <Download className="w-4 h-4" />
-              {t("hero.downloadCV")}
-            </Button>
-          </a>
-              <Button size="lg" variant="outline" onClick={scrollToContact} className="gap-2 gradient-border">
+              <a href="/Curriculo-Rodrigo-Abade.pdf" download>
+                <Button size="lg" className="gap-2 glow">
+                  <Download className="w-4 h-4" />
+                  {t("hero.downloadCV")}
+                </Button>
+              </a>
+
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={scrollToContact}
+                className="gap-2 gradient-border"
+              >
                 <Mail className="w-4 h-4" />
                 {t("hero.contact")}
               </Button>
@@ -103,6 +109,7 @@ export const Hero = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </motion.a>
+
               <motion.a
                 href="https://github.com/Abade26"
                 target="_blank"
@@ -116,7 +123,7 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -126,20 +133,14 @@ export const Hero = () => {
             <div className="relative">
               {/* Decorative ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-accent opacity-20 blur-xl animate-pulse" />
-              
+
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border">
-                <div className="w-full h-full bg-secondary flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                  <div className="w-full h-full">
-                        <img
-                          src="/public/teste.png"
-                          alt="Foto de perfil"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>''
-                  </div>
-                </div>
+                <img
+                  src="/teste.png"
+                  alt="Foto de perfil"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
 
               {/* Floating tech badges */}
