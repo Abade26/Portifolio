@@ -26,6 +26,12 @@ const projects = [
     repoUrl: "https://github.com/Abade26/Sistemas_Digitais_Monitoramento-Ar",
   },
   {
+    key: "project5",
+    icon: Wrench,
+    tags: ["html", "css", "javascript", "firebase", "webSystem"],
+    repoUrl: "https://github.com/Abade26/Tela-principal-PsicoConnect",
+  },
+  {
     key: "project1",
     icon: Settings,
     tags: ["automation", "backgroundService", "dotnet", "sqlServer"],

@@ -86,6 +86,15 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.tags.monitoramento": "Monitoramento em Tempo Real",
     "projects.tags.cloud": "Cloud / Nuvem",
 
+    "projects.project5.title": "PsicoConnect – Plataforma Web para Atendimento Psicológico",
+    "projects.project5.description":"Plataforma web desenvolvida para simular um sistema real de atendimento psicológico, com múltiplos perfis, especialidades e chat em tempo real. Projeto focado em organização, modularização e escalabilidade.",
+    "projects.tags.html": "HTML",
+    "projects.tags.css": "CSS",
+    "projects.tags.javascript": "JavaScript",
+    "projects.tags.firebase": "Firebase",
+    "projects.tags.webSystem": "Sistema Web",
+
+
     // Contact
     "contact.title": "Entre em Contato",
     "contact.subtitle": "Vamos conversar sobre seu próximo projeto",
@@ -158,7 +167,16 @@ const translations: Record<Language, Record<string, string>> = {
 
     "projects.project4.title": "IoT Air Quality Monitoring System",
     "projects.project4.description":
-      "IoT system for air quality monitoring using ESP8266, MQ-135 and MQ-7 sensors, OLED display and cloud integration with Supabase and ThingSpeak.",
+    "IoT system for air quality monitoring using ESP8266, MQ-135 and MQ-7 sensors, OLED display and cloud integration with Supabase and ThingSpeak.",
+
+    "projects.project5.title": "PsicoConnect – Web Platform for Psychological Care",
+    "projects.project5.description":
+    "Web platform built to simulate a real psychological care system, with multiple profiles, specialties and real-time chat. Project focused on organization, modularization and scalability.",
+    "projects.tags.html": "HTML",
+    "projects.tags.css": "CSS",
+    "projects.tags.javascript": "JavaScript",
+    "projects.tags.firebase": "Firebase",
+    "projects.tags.webSystem": "Web System",
 
     // Project tags
     "projects.tags.automation": "Automation",
