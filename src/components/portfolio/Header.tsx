@@ -4,7 +4,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 
-const navItems = ["about", "skills", "experience", "projects", "contact"];
+const navItems = ["about", "skills", "experience", "projects", "publications", "contact"];
 
 export const Header = () => {
   const { language, toggleLanguage, t } = useLanguage();
@@ -46,9 +46,9 @@ export const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-             Rodrigo Abade
+            Rodrigo Abade
           </motion.a>
-       
+
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <motion.button
@@ -81,7 +81,11 @@ export const Header = () => {
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </Button>
           </div>
         </nav>

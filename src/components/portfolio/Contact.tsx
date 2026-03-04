@@ -33,7 +33,7 @@ export const Contact = () => {
   const { ref, inView } = useInView({ threshold: 0.2 });
 
   return (
-    <section id="contact" className="py-20 md:py-32 relative overflow-hidden" ref={ref}>
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden bg-secondary/30" ref={ref}>
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px]" />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const quickLinks = [
@@ -7,6 +7,7 @@ const quickLinks = [
   { key: "skills", href: "#skills" },
   { key: "experience", href: "#experience" },
   { key: "projects", href: "#projects" },
+  { key: "publications", href: "#publications" },
   { key: "contact", href: "#contact" },
 ];
 
@@ -18,6 +19,7 @@ export const Footer = () => {
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
           {/* Logo */}
           <motion.a
             href="#"
@@ -53,6 +55,7 @@ export const Footer = () => {
             >
               <Linkedin className="w-5 h-5" />
             </motion.a>
+
             <motion.a
               href="https://github.com/Abade26"
               target="_blank"
@@ -74,9 +77,12 @@ export const Footer = () => {
           <p>
             © {currentYear} Abade. {t("footer.rights")}.
           </p>
-          <p className="flex items-center gap-1">
-            {t("footer.builtWith")} <Heart className="w-4 h-4 text-destructive fill-destructive" /> 
-            <span className="gradient-text font-medium">React + Tailwind</span>
+
+          <p>
+            {t("footer.builtWith")}{" "}
+            <span className="gradient-text font-medium">
+              React + Tailwind
+            </span>
           </p>
         </div>
       </div>

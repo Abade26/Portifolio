@@ -94,7 +94,6 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.tags.firebase": "Firebase",
     "projects.tags.webSystem": "Sistema Web",
 
-
     // Contact
     "contact.title": "Entre em Contato",
     "contact.subtitle": "Vamos conversar sobre seu próximo projeto",
@@ -105,6 +104,18 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     "footer.rights": "Todos os direitos reservados",
     "footer.builtWith": "Desenvolvido com",
+
+    // Publication
+    "nav.publications": "Publicações",
+    "publications.title": "Publicações Acadêmicas",
+    "publications.pub1.title":
+    "Reconhecimento de Rachaduras Estruturais Usando Inteligência Artificial com Raspberry Pi – II CONAPEC",
+    "publications.pub1.description":
+    "Resumo publicado nos anais do congresso (DOI). Pesquisa aplicada com detecção de rachaduras usando visão computacional e Raspberry Pi.",
+    "publications.tags.doi": "DOI",
+    "publications.tags.ai": "IA",
+    "publications.tags.computerVision": "Visão Computacional",
+    "publications.tags.raspberryPi": "Raspberry Pi",
   },
 
   en: {
@@ -211,6 +222,18 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     "footer.rights": "All rights reserved",
     "footer.builtWith": "Built with",
+
+    // Publications
+    "nav.publications": "Publications",
+    "publications.title": "Academic Publications",
+    "publications.pub1.title":
+    "Structural Crack Recognition Using Artificial Intelligence with Raspberry Pi – II CONAPEC",
+    "publications.pub1.description":
+    "Abstract published in the conference proceedings (DOI). Applied research on crack detection using computer vision and Raspberry Pi.",
+    "publications.tags.doi": "DOI",
+    "publications.tags.ai": "AI",
+    "publications.tags.computerVision": "Computer Vision",
+    "publications.tags.raspberryPi": "Raspberry Pi",
   },
 };
 

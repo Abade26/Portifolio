@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Eye, Cpu, Globe, Bot } from "lucide-react";
+import { ExternalLink, BookOpen } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 import { Badge } from "@/components/ui/badge";
@@ -11,39 +11,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const projects = [
+const publications = [
   {
-    key: "project3",
-    icon: Eye, // IA / Visão
-    tags: ["python", "ia", "visaoComputacional", "yolo", "raspberry", "deepLearning"],
-    demoUrl: "https://www.youtube.com/watch?v=gwSmVQ5t_iU",
-    repoUrl: "https://github.com/Abade26/Deteccao-IA-Rachadura",
-  },
-  {
-    key: "project4",
-    icon: Cpu, // IoT / Embarcados
-    tags: ["c++", "iot", "sistemasEmbarcados", "esp8266", "sensores", "monitoramento", "cloud"],
-    repoUrl: "https://github.com/Abade26/Sistemas_Digitais_Monitoramento-Ar",
-  },
-  {
-    key: "project5",
-    icon: Globe, // Web / Firebase
-    tags: ["html", "css", "javascript", "firebase", "webSystem"],
-    repoUrl: "https://github.com/Abade26/Psiconnect",
-  },
-  {
-    key: "project1",
-    icon: Bot, // Automação / Worker
-    tags: ["automation", "backgroundService", "dotnet", "sqlServer"],
+    key: "pub1",
+    icon: BookOpen,
+    tags: ["doi", "ai", "computerVision", "raspberryPi"],
+    doiUrl: "https://doi.org/10.51189/ii-conapec/70773",
   },
 ];
 
-export const Projects = () => {
+export const Publications = () => {
   const { t } = useLanguage();
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="projects" ref={ref} className="py-20 md:py-32 bg-secondary/30">
+    <section id="publications" ref={ref} className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -58,80 +40,69 @@ export const Projects = () => {
               transition={{ delay: 0.2 }}
               className="text-3xl md:text-4xl font-bold mb-4"
             >
-              <span className="gradient-text">{t("projects.title")}</span>
+              <span className="gradient-text">{t("publications.title")}</span>
             </motion.h2>
+
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
           </div>
 
           {/* Grid */}
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {projects.map((project, index) => (
+            {publications.map((pub, index) => (
               <motion.div
-                key={project.key}
+                key={pub.key}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.15 }}
                 whileHover={{ y: -5 }}
-                className="group"
+                className={`group w-full max-w-xl mx-auto ${
+                  publications.length === 1 ? "md:col-span-2" : ""
+                }`}
               >
-                {/* ✅ flex flex-col + mt-auto = tags alinhadas no mesmo lugar */}
-                <Card className="h-full flex flex-col bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
-                  {/* Accent */}
+                <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
+                  {/* Top accent */}
                   <div className="h-1 bg-gradient-to-r from-primary to-accent" />
 
                   <CardHeader>
                     <div className="flex items-start justify-between">
-                      {/* Icon (animação mantida) */}
+                      {/* Icon */}
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.5 }}
                         className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors"
                       >
-                        <project.icon className="w-6 h-6 text-primary" />
+                        <pub.icon className="w-6 h-6 text-primary" />
                       </motion.div>
 
-                      {/* Links (Video + GitHub) */}
+                      {/* External link */}
                       <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        {project.demoUrl && (
-                          <a
-                            href={project.demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title="Ver demonstração"
-                            className="p-2 rounded-lg hover:bg-secondary transition-colors"
-                          >
-                            <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                          </a>
-                        )}
-
-                        {project.repoUrl && (
-                          <a
-                            href={project.repoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title="Ver código no GitHub"
-                            className="p-2 rounded-lg hover:bg-secondary transition-colors"
-                          >
-                            <Github className="w-4 h-4 text-muted-foreground" />
-                          </a>
-                        )}
+                        <a
+                          href={pub.doiUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Ver publicação"
+                          className="p-2 rounded-lg hover:bg-secondary transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                        </a>
                       </div>
                     </div>
 
-                    {/* Title / Description */}
+                    {/* Title */}
                     <CardTitle className="mt-4 group-hover:text-primary transition-colors">
-                      {t(`projects.${project.key}.title`)}
+                      {t(`publications.${pub.key}.title`)}
                     </CardTitle>
 
+                    {/* Description */}
                     <CardDescription className="text-muted-foreground leading-relaxed">
-                      {t(`projects.${project.key}.description`)}
+                      {t(`publications.${pub.key}.description`)}
                     </CardDescription>
                   </CardHeader>
 
-                  {/* Tags (sempre no “rodapé” do card) */}
-                  <CardContent className="mt-auto">
+                  {/* Tags */}
+                  <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
+                      {pub.tags.map((tag, tagIndex) => (
                         <motion.div
                           key={tag}
                           initial={{ opacity: 0, scale: 0.8 }}
@@ -144,10 +115,23 @@ export const Projects = () => {
                             variant="outline"
                             className="border-primary/30 text-primary hover:bg-primary/10 transition-colors"
                           >
-                            {t(`projects.tags.${tag}`)}
+                            {t(`publications.tags.${tag}`)}
                           </Badge>
                         </motion.div>
                       ))}
+                    </div>
+
+                    {/* DOI */}
+                    <div className="mt-4 text-sm text-muted-foreground">
+                      DOI:{" "}
+                      <a
+                        href={pub.doiUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-primary transition-colors break-all"
+                      >
+                        10.51189/ii-conapec/70773
+                      </a>
                     </div>
                   </CardContent>
                 </Card>

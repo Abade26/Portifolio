@@ -6,6 +6,7 @@ import {
   Skills,
   Experience,
   Projects,
+  Publications,
   Contact,
   Footer,
 } from "@/components/portfolio";
@@ -21,6 +22,7 @@ const Index = () => {
           <Skills />
           <Experience />
           <Projects />
+          <Publications />
           <Contact />
         </main>
         <Footer />
