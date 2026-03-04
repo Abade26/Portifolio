@@ -15,15 +15,34 @@ export const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!element) return;
+
+    // altura aproximada do header fixo (h-16 mobile / h-20 md)
+    const headerOffset = 80;
+
+    const doScroll = () => {
+      const elementTop = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementTop - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    };
+
+    if (isMobileMenuOpen) {
+      // Fecha o menu primeiro e espera a animação de height terminar
       setIsMobileMenuOpen(false);
+      setTimeout(doScroll, 220);
+    } else {
+      doScroll();
     }
   };
 
@@ -40,19 +59,21 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16 md:h-20">
-          <motion.a
-            href="#"
+          <motion.button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-xl md:text-2xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Rodrigo Abade
-          </motion.a>
+          </motion.button>
 
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <motion.button
                 key={item}
+                type="button"
                 onClick={() => scrollToSection(item)}
                 className="text-muted-foreground hover:text-foreground transition-colors relative group"
                 whileHover={{ y: -2 }}
@@ -69,6 +90,7 @@ export const Header = () => {
               size="sm"
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+              type="button"
             >
               <Globe className="w-4 h-4" />
               <span className="font-medium">{language.toUpperCase()}</span>
@@ -79,7 +101,9 @@ export const Header = () => {
               variant="ghost"
               size="icon"
               className="md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              type="button"
+              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -98,15 +122,17 @@ export const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border overflow-hidden"
           >
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item}
+                  type="button"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.05 }}
                   onClick={() => scrollToSection(item)}
                   className="text-left text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
                 >

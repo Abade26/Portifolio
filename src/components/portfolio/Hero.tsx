@@ -14,7 +14,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[150vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[140vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-12 md:pt-16">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse" />
@@ -31,7 +31,7 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 text-center lg:text-left"
+            className="flex-1 text-center lg:text-left -translate-y-28 md:-translate-y-32 lg:-translate-y-10"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
