@@ -14,7 +14,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[150vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse" />
@@ -137,7 +137,8 @@ export const Hero = () => {
               {/* Image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border">
                 <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
-                  <img src="/teste.png" 
+                  <img
+                    src="/teste.png"
                     alt="Foto de perfil"
                     className="w-full h-full object-cover"
                     loading="eager"
