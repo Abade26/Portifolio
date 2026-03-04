@@ -16,7 +16,9 @@ const Index = () => {
     <LanguageProvider>
       <div className="min-h-screen bg-background dark">
         <Header />
-        <main>
+
+        {/* Espaço para compensar o header fixo */}
+        <main className="pt-20">
           <Hero />
           <About />
           <Skills />
@@ -25,6 +27,7 @@ const Index = () => {
           <Publications />
           <Contact />
         </main>
+
         <Footer />
       </div>
     </LanguageProvider>
