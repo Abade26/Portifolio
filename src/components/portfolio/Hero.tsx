@@ -14,8 +14,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[140vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-12 md:pt-16">
-      {/* Background gradient effects */}
+<section className="relative min-h-[140vh] md:min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-10 md:pt-16">      {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] animate-pulse" />
@@ -25,13 +24,13 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 text-center lg:text-left -translate-y-28 md:-translate-y-32 lg:-translate-y-10"
+            className="flex-1 text-center lg:text-left -translate-y-44 md:-translate-y-32 lg:-translate-y-10"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -128,8 +127,7 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex-1 flex justify-center"
-          >
+className="flex-1 flex justify-center w-full -mt-6 md:mt-0"          >
             <div className="relative">
               {/* Decorative ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-accent opacity-20 blur-xl animate-pulse" />
