@@ -26,30 +26,38 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About
     "about.title": "Sobre Mim",
-    "about.description": "Sou Desenvolvedor .NET com experiência no desenvolvimento e evolução de sistemas, atuando principalmente no back-end. Trabalho com .NET Core, criação de serviços em background (Worker Services) e Entity Framework Core para acesso e manipulação de dados. Tenho foco em código limpo, boas práticas de arquitetura e soluções que automatizam processos e aumentam a eficiência dos sistemas.",
+    "about.description": "Desenvolvedor Backend .NET com experiência prática em sistemas corporativos no Ministério Público do Estado da Bahia (MPBA). Atuei no desenvolvimento de um serviço em background (.NET Worker Service) responsável por automatizar desligamentos de usuários, com integração ao Active Directory via LDAP e regras de negócio baseadas em CPF. Também construí um módulo administrativo completo (CRUD) em ASP.NET WebForms, com arquitetura em camadas (DAL/BLL/DTO) e persistência via NHibernate. Tenho experiência complementar com projetos próprios envolvendo visão computacional e IoT, incluindo publicação em congresso científico.",
     "about.stats.experience": "Anos de experiência",
     "about.stats.specialization": "Especialização",
     "about.stats.systems": "Sistemas desenvolvidos",
 
     // Skills
-    "skills.title": "Habilidades Técnicas",
+   "skills.title": "Habilidades Técnicas",
     "skills.backend": "Back-end",
     "skills.database": "Banco de Dados",
     "skills.other": "Outras Habilidades",
     "skills.pratices": "Práticas de desenvolvimento",
+   // "skills.learning": "Em aprendizado",
 
     // Experience
-    "experience.title": "Experiência Profissional",
+   "experience.title": "Experiência Profissional",
     "experience.role": "Desenvolvedor .NET",
-    "experience.company": "Ministério Público",
+    "experience.company": "Ministério Público do Estado da Bahia",
     "experience.period": "02/2024 - 12/2025",
-    "experience.description": "Atuação no desenvolvimento e evolução de sistemas institucionais.",
-    "experience.activity1": "Desenvolvimento e manutenção de sistemas internos",
-    "experience.activity2": "Implementação de novas funcionalidades baseadas em regras de negócio",
-    "experience.activity3": "Correções de bugs e melhoria de performance",
-    "experience.activity4": "Criação de serviços automatizados",
-    "experience.activity5":"Participação no projeto de desativação automática de estagiários e voluntários",
+    "experience.description": "Atuação no desenvolvimento e manutenção de dois sistemas corporativos distintos no Ministério Público do Estado da Bahia.",
     "experience.activitiesTitle": "Principais atividades:",
+    "experience.project1.title": "Projeto 1 — Serviço de Automação de Desligamento (Windows Worker Service)",
+    "experience.project1.activity1": "Desenvolvi Windows Worker Service em .NET 6, executado continuamente em background, para automatizar a desativação de contas de estagiários e voluntários com contratos vencidos",
+    "experience.project1.activity2": "Implementei regras de negócio para verificar, via CPF, se o usuário ainda possuía outro vínculo ativo antes de decidir pela desativação, evitando desligamentos incorretos",
+    "experience.project1.activity3": "Integrei o serviço ao Active Directory via LDAP para desativação automática de contas, reduzindo o risco de acesso indevido após o fim do contrato",
+    "experience.project1.activity4": "Utilizei Entity Framework Core para consultas e persistência no SQL Server, com Dependency Injection e logging estruturado",
+    "experience.project1.activity5": "Atuei em manutenção corretiva e evolutiva do serviço, incluindo correção de bugs e melhorias de desempenho",
+    "experience.project2.title": "Projeto 2 — Módulo de Gerenciamento de Usuários Externos (SRA)",
+    "experience.project2.activity1": "Desenvolvi módulo completo de CRUD para gerenciamento de usuários externos em ASP.NET WebForms, seguindo arquitetura em camadas (DAL/BLL/DTO) com Fluent NHibernate",
+    "experience.project2.activity2": "Implementei cadastro, edição, ativação/desativação e busca dinâmica de usuários, com paginação via GridView e controle de autenticação por Session",
+    "experience.project2.activity3": "Construí relacionamento entre usuários e múltiplos telefones, com validação de CPF e validação de idade mínima",
+    "experience.project2.activity4": "Utilizei LINQ e QueryOver para consultas, e Newtonsoft.Json para serialização na integração entre JavaScript e backend",
+    "experience.project2.activity5": "Entreguei o módulo de usuários totalmente funcional; demais módulos estavam previstos para fases seguintes, não iniciadas devido ao término do estágio",
 
     // Projects
     "projects.title": "Projetos",
@@ -135,7 +143,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About
     "about.title": "About Me",
-    "about.description": "I am a .NET Developer with experience in the development and evolution of systems, working primarily on the back end. I work with .NET Core, building background services (Worker Services), and using Entity Framework Core for data access and manipulation. I focus on clean code, good architectural practices, and solutions that automate processes and improve system efficiency.",
+    "about.description": "I'm a Backend .NET Developer with hands-on experience in corporate systems at the Public Prosecutor's Office of the State of Bahia (MPBA). I worked on a background automation service (.NET Worker Service) that integrates with Active Directory via LDAP, and built a complete administrative module in ASP.NET WebForms using a layered architecture (DAL/BLL/DTO). I also have personal projects involving computer vision and IoT, including a technical paper presented at a scientific conference. Comfortable with C#, Entity Framework Core, NHibernate, SQL Server, and object-oriented principles; currently learning containerization with Docker.",
     "about.stats.experience": "Years of experience",
     "about.stats.specialization": "Specialization",
     "about.stats.systems": "Systems developed",
@@ -152,13 +160,22 @@ const translations: Record<Language, Record<string, string>> = {
     "experience.role": ".NET Developer",
     "experience.company": "Public Prosecutor's Office",
     "experience.period": "02/2024 - 12/2025",
-    "experience.description": "Working on the development and evolution of institutional systems.",
-    "experience.activity1": "Development and maintenance of internal systems",
-    "experience.activity2": "Implementation of new features based on business rules",
-    "experience.activity3": "Bug fixes and performance improvements",
-    "experience.activity4": "Creation of automated services",
-    "experience.activity5": "Participation in the automatic deactivation project for interns and volunteers",
+    "experience.description": "Worked on the development and maintenance of two distinct corporate systems at the Public Prosecutor's Office of the State of Bahia.",
     "experience.activitiesTitle": "Main activities:",
+
+    "experience.project1.title": "Project 1 — Automated Deactivation Service (Windows Worker Service)",
+    "experience.project1.activity1": "Developed a Windows Worker Service in .NET 6, running continuously in the background, to automate the deactivation of intern and volunteer accounts with expired contracts",
+    "experience.project1.activity2": "Implemented business rules to check, via CPF (national ID), whether the user still had another active contract before proceeding with deactivation, preventing incorrect terminations",
+    "experience.project1.activity3": "Integrated the service with Active Directory via LDAP for automatic account deactivation, reducing the risk of unauthorized access after contract termination",
+    "experience.project1.activity4": "Used Entity Framework Core for queries and persistence in SQL Server, with Dependency Injection and structured logging",
+    "experience.project1.activity5": "Performed corrective and evolutionary maintenance on the service, including bug fixes and performance improvements",
+
+    "experience.project2.title": "Project 2 — External User Management Module (SRA)",
+    "experience.project2.activity1": "Developed a complete CRUD module for managing external users in ASP.NET WebForms, following a layered architecture (DAL/BLL/DTO) with Fluent NHibernate",
+    "experience.project2.activity2": "Implemented user registration, editing, activation/deactivation, and dynamic search, with GridView pagination and Session-based authentication",
+    "experience.project2.activity3": "Built the relationship between users and multiple phone numbers, including CPF validation and minimum age validation",
+    "experience.project2.activity4": "Used LINQ and QueryOver for queries, and Newtonsoft.Json for serialization in the integration between JavaScript and the backend",
+    "experience.project2.activity5": "Delivered the user management module fully functional; the remaining modules were planned for subsequent phases, not started due to the end of the internship",
 
     // Projects
     "projects.title": "Projects",

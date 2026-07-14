@@ -10,18 +10,21 @@ const skillCategories = [
       { name: "C#", icon: "💜" },
       { name: ".NET", icon: "🟣" },
       { name: "APIs REST", icon: "🔗" },
-      { name: "Background Services", icon: "⚙️" },
       { name: "ASP.NET Core", icon: "🔗" },
+      { name: "ASP.NET WebForms", icon: "🔗" },
+      { name: "Windows Worker Service", icon: "⚙️" },
       { name: "Entity Framework Core", icon: "⚙️" },
+      { name: "NHibernate", icon: "⚙️" },
+      { name: "Fluent NHibernate", icon: "⚙️" },
     ],
   },
- 
   {
     key: "database",
     skills: [
       { name: "SQL Server", icon: "🗄️" },
       { name: "Data Modeling", icon: "📊" },
       { name: "LINQ", icon: "🗄️" },
+      { name: "QueryOver", icon: "🗄️" },
       { name: "Migrations (EF Core)", icon: "📊" },
     ],
   },
@@ -29,14 +32,16 @@ const skillCategories = [
     key: "other",
     skills: [
       { name: "Legacy Systems", icon: "🔧" },
+      { name: "Active Directory / LDAP", icon: "🔐" },
       { name: "System Integration", icon: "🔄" },
       { name: "Business Logic", icon: "💡" },
       { name: "Version Control", icon: "📝" },
       { name: "Git / GitHub", icon: "🔧" },
-      { name: "Docker", icon: "🔄" },
     ],
   },
 ];
+
+const learningSkills = [{ name: "Docker", icon: "🐳" }];
 
 export const Skills = () => {
   const { t } = useLanguage();
@@ -72,7 +77,7 @@ export const Skills = () => {
                 className="relative group"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative bg-card rounded-2xl p-6 border border-border hover:border-primary/50 transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-6 text-center">
                     {t(`skills.${category.key}`)}
@@ -101,6 +106,42 @@ export const Skills = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Learning / in-progress skills — visually distinct from mastered skills */}
+          {/*
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.6 }}
+            className="max-w-6xl mx-auto mt-8"
+          >
+            <div className="relative bg-card/50 rounded-2xl p-6 border border-dashed border-border">
+              <h3 className="text-xl font-semibold mb-6 text-center text-muted-foreground">
+                {t("skills.learning")}
+              </h3>
+
+              <div className="flex flex-wrap gap-3 justify-center">
+                {learningSkills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ delay: 0.7 + skillIndex * 0.05 }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                  >
+                    <Badge
+                      variant="outline"
+                      className="px-4 py-2 text-sm flex items-center gap-2 cursor-default opacity-70 border-dashed"
+                    >
+                      <span>{skill.icon}</span>
+                      <span>{skill.name}</span>
+                    </Badge>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+          */}
 
           {/* Tech logos/icons strip */}
           <motion.div

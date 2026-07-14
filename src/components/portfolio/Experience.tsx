@@ -7,12 +7,20 @@ export const Experience = () => {
   const { t } = useLanguage();
   const { ref, inView } = useInView({ threshold: 0.1 });
 
-  const activities = [
-    "experience.activity1",
-    "experience.activity2",
-    "experience.activity3",
-    "experience.activity4",
-    "experience.activity5",
+  const project1Activities = [
+    "experience.project1.activity1",
+    "experience.project1.activity2",
+    "experience.project1.activity3",
+    "experience.project1.activity4",
+    "experience.project1.activity5",
+  ];
+
+  const project2Activities = [
+    "experience.project2.activity1",
+    "experience.project2.activity2",
+    "experience.project2.activity3",
+    "experience.project2.activity4",
+    "experience.project2.activity5",
   ];
 
   return (
@@ -80,17 +88,43 @@ export const Experience = () => {
                       {t("experience.description")}
                     </p>
 
-                  <h4 className="font-semibold mb-4 text-foreground">
-                    {t("experience.activitiesTitle")}
-                  </h4>     
-                                 
-                    <ul className="space-y-3">
-                      {activities.map((activity, index) => (
+                    <h4 className="font-semibold mb-4 text-foreground">
+                      {t("experience.activitiesTitle")}
+                    </h4>
+
+                    {/* Projeto 1 */}
+                    <h5 className="font-semibold mb-3 text-primary">
+                      {t("experience.project1.title")}
+                    </h5>
+                    <ul className="space-y-3 mb-6">
+                      {project1Activities.map((activity, index) => (
                         <motion.li
                           key={activity}
                           initial={{ opacity: 0, x: -20 }}
                           animate={inView ? { opacity: 1, x: 0 } : {}}
                           transition={{ delay: 0.5 + index * 0.1 }}
+                          className="flex items-start gap-3"
+                        >
+                          <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">{t(activity)}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+
+                    {/* Projeto 2 */}
+                    <h5 className="font-semibold mb-3 text-primary">
+                      {t("experience.project2.title")}
+                    </h5>
+                    <ul className="space-y-3">
+                      {project2Activities.map((activity, index) => (
+                        <motion.li
+                          key={activity}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={inView ? { opacity: 1, x: 0 } : {}}
+                          transition={{
+                            delay:
+                              0.5 + (project1Activities.length + index) * 0.1,
+                          }}
                           className="flex items-start gap-3"
                         >
                           <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
