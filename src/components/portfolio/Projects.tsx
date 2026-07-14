@@ -17,19 +17,19 @@ const projects = [
     icon: Eye, // IA / Visão
     tags: ["python", "ia", "visaoComputacional", "yolo", "raspberry", "deepLearning"],
     demoUrl: "https://www.youtube.com/watch?v=gwSmVQ5t_iU",
-    repoUrl: "https://github.com/Abade26/Deteccao-IA-Rachadura",
+    repoUrl: "https://github.com/RodrigoAbade/Deteccao-IA-Rachadura",
   },
   {
     key: "project4",
     icon: Cpu, // IoT / Embarcados
     tags: ["c++", "iot", "sistemasEmbarcados", "esp8266", "sensores", "monitoramento", "cloud"],
-    repoUrl: "https://github.com/Abade26/Sistemas_Digitais_Monitoramento-Ar",
+    repoUrl: "https://github.com/RodrigoAbade/Sistemas_Digitais_Monitoramento-Ar",
   },
   {
     key: "project5",
     icon: Globe, // Web / Firebase
     tags: ["html", "css", "javascript", "firebase", "webSystem"],
-    repoUrl: "https://github.com/Abade26/Psiconnect",
+    repoUrl: "https://github.com/RodrigoAbade/Psiconnect",
   },
   {
     key: "project1",
