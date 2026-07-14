@@ -108,7 +108,7 @@ export const Skills = () => {
           </div>
 
           {/* Learning / in-progress skills — visually distinct from mastered skills */}
-          {/*
+          {/*1
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
